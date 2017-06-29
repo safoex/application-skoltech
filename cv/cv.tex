@@ -1,0 +1,183 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.3 (29/10/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage[scale=0.75]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Evgenii} % Your first name
+\familyname{Safronov} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Curriculum Vitae}
+%\address{123 Broadway}{City, State 12345}
+\mobile{(926) 821 16 29}
+%\phone{(000) 111 1112}
+%\fax{(000) 111 1113}
+\email{safoex@hotmail.com}
+%\homepage{staff.org.edu/~jsmith}{staff.org.edu/$\sim$jsmith} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+%\extrainfo{additional information}
+%\photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+%\quote{"A witty and playful quotation" - John Smith}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	COVER LETTER
+%----------------------------------------------------------------------------------------
+
+% To remove the cover letter, comment out this entire block
+\iffalse
+\clearpage
+
+\recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
+\date{\today} % Letter date
+\opening{Dear Sir or Madam,} % Opening greeting
+\closing{Sincerely yours,} % Closing phrase
+\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+
+\makelettertitle % Print letter title
+
+\lipsum[1-2] % Dummy text
+\lipsum[4] % Dummy text
+
+\makeletterclosing % Print letter signature
+
+\newpage
+\fi
+%----------------------------------------------------------------------------------------
+%	CURRICULUM VITAE
+%----------------------------------------------------------------------------------------
+
+\makecvtitle % Print the CV title
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+%\cventry{2009--2013}{Student}{Lyceum 64}{Omsk}{\textit{GPA -- 8.0}}{First Class Honours}  % Arguments not required can be left empty
+\cventry{2013--2017}{Bachelor of Applied Physics and Math}{Moscow Institute of Physics and Technology}{Dolgoprudnyy}{\textit{GPA -- 4.9/5}}{Specialized in Nanophysics}
+
+\section{Bachelor Thesis}
+
+\cvitem{Title}{Qubit gates optimization}
+%\cvitem{Supervisors}{Professor James Smith \& Associate Professor Jane Smith}
+\cvitem{Description}{In this thesis I wrote a little Python framework for modelling different qubit systems and, in particular, minimize qubit gates errors.}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+
+\subsection{Vocational}
+
+\cventry{2017}{Eurobot Open}{Russian finals participation}{}{}{
+Contributed into almost every part of project -- from the motivation, fund raising and administrative functions to programming and assembly.
+\newline{}\newline{}
+Key technologies used:
+\begin{itemize}
+	\item Linux
+	\item ROS
+	\item Python, C++
+	\item Arduino, Raspberry Pi
+	\item Solidworks, 3D printing
+\end{itemize}
+}
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\subsection{Other}
+\cventry{2016--now}{Junior researcher}{RQC}{}{}{
+Checkout the description for Bachelor's thesis.
+}
+
+\cventry{2016}{Summer Intern}{\textsc{Helmholtz-Zentrum Berlin}}{Berlin, Germany}{Project ``Photon-random walk model for diffuse transient absorption spectroscopy''}{Poster presentation}
+
+\cventry{2015--2016}{Website development}{dati.mipt.ru}{\textbf{D}epartment of \textbf{A}pplied and \textbf{T}heoretical \textbf{I}nformatics}{}{During this work I learned how to build a basic website}
+
+\cventry{2014--2015}{Tutor}{``Ваш репетитор''}{}{}{Small experience as a tutor.}
+
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Awards}
+
+\cvitem{2016}{Best ``question by the choice'' part of general physics exam }
+\cvitem{2011-2013}{Many regional contests of russian olympiad for school students winner -- astronomy, informatics, math and physics. Participation in finals of astronomy and physics.}
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Programming \& related skills}
+\cvitem{Languages}{C++, C, Python, Matlab, JavaScript, CoffeeScript, PHP}
+\cvitem{Markup langs}{HTML, CSS, \LaTeX}
+\cvitem{Other}{Linux, ROS, Git}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Languages}
+
+\cvitemwithcomment{Russian}{Mothertongue}{}
+\cvitemwithcomment{English}{Intermediate}{Conversationally fluent}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+\iffalse
+\section{Interests}
+
+\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+
+\cvlistdoubleitem{Piano}{Chess}
+\cvlistdoubleitem{Cooking}{Dancing}
+\cvlistitem{Running}
+\fi
+%----------------------------------------------------------------------------------------
+
+\end{document}
