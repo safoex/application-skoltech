@@ -31,6 +31,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english,russian]{babel}
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{xcolor}
+\usepackage{ wasysym }
+\definecolor{RED}{HTML}{FF0000}
 
 \usepackage[scale=0.75]{geometry} % Reduce document margins
 %\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
@@ -52,7 +55,7 @@
 \email{safoex@hotmail.com}
 %\homepage{staff.org.edu/~jsmith}{staff.org.edu/$\sim$jsmith} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
 %\extrainfo{additional information}
-%\photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+\photo[70pt][0.4pt]{main} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
 %\quote{"A witty and playful quotation" - John Smith}
 
 %----------------------------------------------------------------------------------------
@@ -95,13 +98,13 @@
 \section{Education}
 
 %\cventry{2009--2013}{Student}{Lyceum 64}{Omsk}{\textit{GPA -- 8.0}}{First Class Honours}  % Arguments not required can be left empty
-\cventry{2013--2017}{Bachelor of Applied Physics and Math}{Moscow Institute of Physics and Technology}{Dolgoprudnyy}{\textit{GPA -- 4.9/5}}{Specialized in Nanophysics}
+\cventry{2013--2017}{Bachelor of Applied Mathematics and Physics}{Moscow Institute of Physics and Technology}{Dolgoprudnyy}{\underline{Diploma with honors},~GPA -- \colorbox{RED!30}{4.92}/5}{Department of General and Applied Physics}
 
 \section{Bachelor Thesis}
 
-\cvitem{Title}{Qubit gates optimization}
-%\cvitem{Supervisors}{Professor James Smith \& Associate Professor Jane Smith}
-\cvitem{Description}{In this thesis I wrote a little Python framework for modelling different qubit systems and, in particular, minimize qubit gates errors.}
+\cvitem{Title}{Optimization of one and two qubit gates}
+\cvitem{Supervisors}{Kirill Shulga \& Gleb Fedorov, Russian Quantum Center}
+\cvitem{Description}{Development of a Python framework and modelling different qubit systems.}
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
@@ -112,12 +115,12 @@
 \subsection{Vocational}
 
 \cventry{2017}{Eurobot Open}{Russian finals participation}{}{}{
-Contributed into almost every part of project -- from the motivation, fund raising and administrative functions to programming and assembly.
+Contributed into almost every part of project -- from the fund raising and administrative functions to programming and assembly.
 \newline{}\newline{}
 Key technologies used:
 \begin{itemize}
 	\item Linux
-	\item ROS
+	\item \colorbox{RED!30}{ROS}
 	\item Python, C++
 	\item Arduino, Raspberry Pi
 	\item Solidworks, 3D printing
@@ -129,15 +132,14 @@ Key technologies used:
 %------------------------------------------------
 
 \subsection{Other}
-\cventry{2016--now}{Junior researcher}{RQC}{}{}{
-Checkout the description for Bachelor's thesis.
-}
+\cventry{2016 -- 2017}{Junior researcher}{\colorbox{RED!15}{Russian Quantum Center}}{}{}{}
+\cventry{2016}{UMNIK Finals}{MIPT}{}{}{}
+\cventry{2016, Autumn}{Speed Dealing}{Robotics Expo 2016}{}{}{ Oral presentation}
+\cventry{2016, Summer}{Summer Intern}{\colorbox{RED!15}{Helmholtz-Zentrum Berlin}}{Berlin, Germany}{Project ``Photon-random walk model for diffuse transient absorption spectroscopy''}{Poster presentation}
 
-\cventry{2016}{Summer Intern}{\textsc{Helmholtz-Zentrum Berlin}}{Berlin, Germany}{Project ``Photon-random walk model for diffuse transient absorption spectroscopy''}{Poster presentation}
+\cventry{2015--2016}{Website development}{dati.mipt.ru}{\textbf{D}epartment of \textbf{A}pplied and \textbf{T}heoretical \textbf{I}nformatics}{}{}
 
-\cventry{2015--2016}{Website development}{dati.mipt.ru}{\textbf{D}epartment of \textbf{A}pplied and \textbf{T}heoretical \textbf{I}nformatics}{}{During this work I learned how to build a basic website}
-
-\cventry{2014--2015}{Tutor}{``Ваш репетитор''}{}{}{Small experience as a tutor.}
+\cventry{2014--2015}{Tutor}{``Ваш репетитор''}{}{}{}
 
 %----------------------------------------------------------------------------------------
 %	AWARDS SECTION
@@ -145,18 +147,19 @@ Checkout the description for Bachelor's thesis.
 
 \section{Awards}
 
-\cvitem{2016}{Best ``question by the choice'' part of general physics exam }
-\cvitem{2011-2013}{Many regional contests of russian olympiad for school students winner -- astronomy, informatics, math and physics. Participation in finals of astronomy and physics.}
+\cvitem{2016}{Best ``question by the choice'' (part of general physics exam) }
+\cvitem{2011-2013}{Winner of many regional stages of All-Russian school olympiad ( astronomy, informatics, math and physics). Participant of the finals in astronomy and physics.}
 
 %----------------------------------------------------------------------------------------
 %	COMPUTER SKILLS SECTION
 %----------------------------------------------------------------------------------------
 
 \section{Programming \& related skills}
-\cvitem{Languages}{C++, C, Python, Matlab, JavaScript, CoffeeScript, PHP}
-\cvitem{Markup langs}{HTML, CSS, \LaTeX}
+\cvitem{Languages}{C++, C, Python, JavaScript, CoffeeScript, Matlab, PHP}
+\cvitem{Markup}{HTML \& CSS, \LaTeX}
 \cvitem{Other}{Linux, ROS, Git}
-
+\cvitem{Also}{Algorithms and Data Structures -- succesfully participated in several individual and team programming contests in school}
+\cvitem{Grades}{For programming-related subjects in MIPT (\textit{out of 10}) : \colorbox{RED!30}{10},\colorbox{RED!30}{10}, \colorbox{RED!30}{9}, \colorbox{RED!30}{10}, \colorbox{RED!30}{10} }
 %----------------------------------------------------------------------------------------
 %	LANGUAGES SECTION
 %----------------------------------------------------------------------------------------
@@ -164,7 +167,7 @@ Checkout the description for Bachelor's thesis.
 \section{Languages}
 
 \cvitemwithcomment{Russian}{Mothertongue}{}
-\cvitemwithcomment{English}{Intermediate}{Conversationally fluent}
+\cvitemwithcomment{English}{Upper-Intermediate}{}
 
 %----------------------------------------------------------------------------------------
 %	INTERESTS SECTION

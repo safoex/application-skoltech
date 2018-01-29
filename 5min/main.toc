@@ -1,0 +1,7 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {english}
+\beamer@sectionintoc {1}{MIPT}{2}{0}{1}
+\beamer@sectionintoc {2}{Diploma}{3}{0}{2}
+\beamer@sectionintoc {3}{Summer School Programme}{4}{0}{3}
+\beamer@sectionintoc {4}{Robotics Expo \& UMNIK }{5}{0}{4}
+\beamer@sectionintoc {5}{Eurobot}{6}{0}{5}
