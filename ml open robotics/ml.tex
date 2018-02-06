@@ -1,0 +1,92 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+%Version for spanish users, by dgarhdez
+
+\documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\usepackage[english]{babel}
+\usepackage{xcolor}
+\usepackage{ wasysym }
+\definecolor{RED}{HTML}{FF0000}
+
+% moderncv themes
+\moderncvstyle{classic}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{green}                              % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Evgenii}{Safronov}
+%\title{Resumé title}                               % optional, remove / comment the line if not wanted
+%\address{Dirección}{CP, Ciudad}{País}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+%\phone[mobile]{000-000-000-000}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+%\email{mailmailmail@gmail.com}                               % optional, remove / comment the line if not wanted
+%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%-----       letter       ---------------------------------------------------------
+% recipient data
+\recipient{MathWorks}{MathWorks}
+\date{\today}
+\opening{Dear MathWorks,}
+\closing{Hope I delivered my sincere interest in MathWorks internship.}
+%\enclosure[Adjunto]{CV}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\makelettertitle
+I found this Robotics SLAM summer internship offer \textit{best-matching} compared with others (seriously, I'm not writing this to every cover letter!). Why? I... 
+\begin{itemize}
+	\item Have an experience with \colorbox{RED!30}{LIDAR}, SLAM, Particle Filter on a real competitive robot
+	\item Highly motivated to get maximum experience from internship. My master thesis will result in a mobile robot, which 100\% would use SLAM algorithms 	
+	\item Made a good project with \colorbox{RED!30}{IMU} sensors (see recommendation by M.Panov)
+	\item Familiar with \colorbox{RED!30}{C++} and OOP - check, for instance \url{https://github.com/safoex/nixcpp} homework for advanced C++ course with good practices. 
+	\item Right now developing a mobile robot software based on ROS for Eurobot competition
+	\item Used \colorbox{RED!30}{Matlab} on my previous internship (physical simulations at Helmoltz-Zentrum Berlin)
+\end{itemize}
+No need to say that MathWorks is world-famous company and it motivates to work hard during internship. 
+\newline
+\newline
+I recieved a bachelor degree in Applied Mathematics and Physics. It gave me excellent overall math background. I'd like to mention Linear Algebra and Probability Theory courses. I always took some extra programming activities to "keep fit" - from website development to robotics project in parallel with bachelor thesis. Finally, I've got bachelor with honors (GPA \colorbox{RED!30}{4.92}/5) from MIPT - one of most prestigious Russian universities.
+\newline
+\newline
+Now I'm enrolled in Skoltech - novel russian university which has collaboration with MIT. I have all excellent grades since I started my education here. I took two elective from Data Science track (Introduction to Data Science and Optimization Methods). I work in Intelligent Space Robotics laboratory on Eurobot Open competition. That's most popular and prestigious robotics contest in Europe. It involves full cycle of robot production - we design, make, code and test two autonomous mobile robots by ourselves. Our robots use fusion of LIDARS, encoders and local sensors for best localisation precision. ROS part of our work can be found here \url{https://github.com/SkoltechRobotics/ros-eurobot-2018}. I also work on decision making and task execution, and this experience will help for ROS testing. 
+\newline
+\newline
+As I wrote, my master thesis will be associated with autonomous indoor mobile robot or with autonomous car project. Both of them are represented in my lab. So, this internship won't be just summer relax for me - it gives me a great opportunity to work in the world-class company on a very relevant problem! 
+\newline
+%\vspace{0.5cm}
+
+
+\makeletterclosing
+
+\end{document}
+
+
+%% end of file `template.tex'.
