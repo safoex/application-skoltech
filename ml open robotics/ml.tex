@@ -55,35 +55,42 @@
 \begin{document}
 %-----       letter       ---------------------------------------------------------
 % recipient data
-\recipient{MathWorks}{MathWorks}
+\recipient{Open Robotics}{info@openrobotics.org}
 \date{\today}
-\opening{Dear MathWorks,}
-\closing{Hope I delivered my sincere interest in MathWorks internship.}
+\opening{Dear Open Robotics,}
+\closing{Hope I delivered my sincere interest in your internship.}
 %\enclosure[Adjunto]{CV}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
 \makelettertitle
-I found this Robotics SLAM summer internship offer \textit{best-matching} compared with others (seriously, I'm not writing this to every cover letter!). Why? I... 
+since I use ROS (and program with its libraries) \textit{every day} I couldn't miss opportunity to apply for this amazing intership. Now I'm a captain of Skoltech's Eurobot team (\url{http://www.eurobot.org/}). This contest includes full development of 2 mobile autonomous robots. Our code architecture is built around ROS (see here \url{https://github.com/SkoltechRobotics/ros-eurobot-2018}, in development). I'm really inspired by the work you are doing, it cuts time of development and simplify concurrent engineering inside team.
+\newline
+\newline
+Last two years I have been coding primarily on Python. And now my code for Eurobot is also written on Python. However, I've started to learn C++ in school (7 years ago!) and continued in university. I've got bachelor degree with honors (GPA 4.92/5) from MIPT and always got excellent grades for programming subjects. MIPT is one of the best russian universities in math \& programming. For example, MIPT team was awarded with Silver medal at ACM ICPC World Finals 2017. I took advanced course on C++ during my study, check \url{https://github.com/safoex/nixcpp}.
+\newline
+\newline
+Eurobot Finals are scheduled to the middle of May, so I'm available since June. I looked through the list of potential ideas for Google Summer of Code. I chose most interesting and relevant for me:
 \begin{itemize}
-	\item Have an experience with \colorbox{RED!30}{LIDAR}, SLAM, Particle Filter on a real competitive robot
-	\item Highly motivated to get maximum experience from internship. My master thesis will result in a mobile robot, which 100\% would use SLAM algorithms 	
-	\item Made a good project with \colorbox{RED!30}{IMU} sensors (see recommendation by M.Panov)
-	\item Familiar with \colorbox{RED!30}{C++} and OOP - check, for instance \url{https://github.com/safoex/nixcpp} homework for advanced C++ course with good practices. 
-	\item Right now developing a mobile robot software based on ROS for Eurobot competition
-	\item Used \colorbox{RED!30}{Matlab} on my previous internship (physical simulations at Helmoltz-Zentrum Berlin)
+	\item \textbf{Robot Work Cell Discovery} This project can improve many of my skills. I'd like to mention, that I have a small experience with UR3 robot from Robotics course at Skoltech. Project goal is actual for such collaborative robot. Also, expierence gained can be applied for other scene building tasks (e.g. for indoor mobile assistants). My future master thesis will be connected with mobile robots or with collaborative robots such as UR3. So, this is a great opportunity to work on this topic and finish it as part of my master thesis. 
+	\item \textbf{Simulate Radar sensor} I've got an excellent background in physics (even won over MIT team in International Theoretical Physics Olympiad \url{http://thworldcup.com/contest2017} and attached NagaokaBags.pdf), so this project involves an efficient fusion of my skills! Also, it again gives me possible mobile robotics connected master thesis.
+	\item \textbf{Create Default Grasping Library} Grasping is another \textit{hot} area of robotics. Experience in grasping is required for developing a good collaborative robot.  	
 \end{itemize}
-No need to say that MathWorks is world-famous company and it motivates to work hard during internship. 
-\newline
-\newline
-I recieved a bachelor degree in Applied Mathematics and Physics. It gave me excellent overall math background. I'd like to mention Linear Algebra and Probability Theory courses. I always took some extra programming activities to "keep fit" - from website development to robotics project in parallel with bachelor thesis. Finally, I've got bachelor with honors (GPA \colorbox{RED!30}{4.92}/5) from MIPT - one of most prestigious Russian universities.
-\newline
-\newline
-Now I'm enrolled in Skoltech - novel russian university which has collaboration with MIT. I have all excellent grades since I started my education here. I took two elective from Data Science track (Introduction to Data Science and Optimization Methods). I work in Intelligent Space Robotics laboratory on Eurobot Open competition. That's most popular and prestigious robotics contest in Europe. It involves full cycle of robot production - we design, make, code and test two autonomous mobile robots by ourselves. Our robots use fusion of LIDARS, encoders and local sensors for best localisation precision. ROS part of our work can be found here \url{https://github.com/SkoltechRobotics/ros-eurobot-2018}. I also work on decision making and task execution, and this experience will help for ROS testing. 
-\newline
-\newline
-As I wrote, my master thesis will be associated with autonomous indoor mobile robot or with autonomous car project. Both of them are represented in my lab. So, this internship won't be just summer relax for me - it gives me a great opportunity to work in the world-class company on a very relevant problem! 
-\newline
-%\vspace{0.5cm}
+Personally I'm working on decision-making for Eurobot competiton. One of subtasks is a strategy optimization and execution. As for optimization part, that's individual for each project. For execution we decided to use behavior trees for their reactivity and human readability. There are several realisations of Behavior Tree concept in ROS:
+\begin{itemize}
+	\item \textbf{behavior\textunderscore tree} This one doesn't work on ROS Kinetic by default. I made few corrections in code (and in 2 depended packages, see again \url{https://github.com/SkoltechRobotics/ros-eurobot-2018} ROS-Behavior-tree, xdot and rqt\textunderscore dot packages). However, their approach didn't match our goals for Eurobot. It's not light-weight and huge BT initialisation and re-initialisation takes a long time. Majority of leaf nodes for mobile robots are 'moving' nodes and in my opinion this package isn't optimizied for fast-execution of similar (but not exactly the same) tasks.
+	\item \textbf{decision\textunderscore making} pure C++ approach. 
+	\item \textbf{pi\textunderscore trees}  I discovered it very recently and like their approach.
+\end{itemize}
+However, it still lacks some desired features.
+I found all them miss certain desirable features:
+\begin{itemize}
+	\item Save and load BT-structure, construct tree from text/xml/json/etc description. This feature simplifies debug, work and online reconstruction of BT.
+	\item Multi-agent BT-execution. Nowadays there is a many research and state-of-the-art work in robotics in the area of multi-agent cooperation.
+	\item Optimized work in terms of service/topics/actionlib re-use. ROS is executed on Linux, but in many projects robot's actuators are not connected directly to Linux-carrying board. Usually, people use STM32/Arduino/etc board for low-level electronics. So, many leaf actions are just communication with this boards.
+\end{itemize}
 
-
+These features improves the value and actuality of BT framework. I've started to work on it and wrote a simple Python class for BT (\url{https://goo.gl/37b1hU}, Github). To finish this job in proper way will be very beneficial and joyful work for me. 
+\newline
+\newline
+Of course, I'm open to any other suggested projects! I'm on the beginning of my engineering career and don't have any prejudicies against any robotics/software engineering areas.
 \makeletterclosing
 
 \end{document}
